@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "landi",
+    "password": null,
+    "database": "sqltodo",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "landi",
+    "password": null,
+    "database": "sqltodo",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "landi",
+    "password": null,
+    "database": "sqltodo",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

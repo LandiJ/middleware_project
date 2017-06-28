@@ -15,16 +15,31 @@
 
 
     <form action="/" method="post">
-    <input type="text" name="todos" class="input">
+    <input type="text" name="Landi" class="input">
     <input type="submit" value="Add Todo" class="button" id="submit">
     </form>
 
     {{#todos}}
+    {{^completed}}
     <div class="list">
-   <li><input class="button" type="button" value="Todo" onclick= value="completed"><span>{{.}}</span></li>
+   <li><form action = "/complete" method = "post"> 
+   <input type="hidden" name="something" value= "{{name}}">
+   <input type="submit" name= "name" value= "Mark As Complete" ></form><span>{{name}}</span></li>
+    </div>
+    {{/completed}}
+    {{/todos}}
+     <h2>Completed</h2>
+    {{#todos}}
+   
+    <div>
+    {{#completed}}
+    {{name}}
+    {{/completed}}
     </div>
     {{/todos}}
+    
    
+    
 
     </body>
 
