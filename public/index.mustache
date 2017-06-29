@@ -24,14 +24,14 @@
     <div class="list">
    <li><form action = "/complete" method = "post"> 
    <input type="hidden" name="something" value= "{{name}}">
-   <input type="submit" name= "name" value= "Mark As Complete" ></form><span>{{name}}</span></li>
+   <span><input type="submit"  class="button" name= "name" value= "Mark As Complete" ></form>{{name}}</span></li>
     </div>
     {{/completed}}
     {{/todos}}
-     <h2>Completed</h2>
+     <h2 class="heading">Completed Tasks</h2>
     {{#todos}}
    
-    <div>
+    <div class="completedTasks">
     {{#completed}}
     {{name}}
     {{/completed}}

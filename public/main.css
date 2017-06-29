@@ -1,5 +1,6 @@
 body {
     background-color: indigo;
+    text-align: center;
 }
 
 li {
@@ -8,10 +9,6 @@ li {
     font-size: 40px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-}
-
-.list {
-    margin-left: 30rem;
 }
 
 
@@ -44,4 +41,19 @@ h1 {
 
 .clicked {
     background-color: indigo;
+}
+
+.heading {
+    text-align: center;
+    color: Pink;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 9rem;
+}
+
+.completedTasks {
+    color: white;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 40px;
 }
