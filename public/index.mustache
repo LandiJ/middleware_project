@@ -23,8 +23,11 @@
     {{^completed}}
     <div class="list">
    <li><form action = "/complete" method = "post"> 
+   <input type="hidden" name="something" value={{name}}>
+   <span><input type="submit"  class="button" name= "name" value= "Mark As Complete" ></form>{{name}}</span></li><form action = "/delete" method ="post"> 
    <input type="hidden" name="something" value= "{{name}}">
-   <span><input type="submit"  class="button" name= "name" value= "Mark As Complete" ></form>{{name}}</span></li>
+   <span><input type="submit"  class="button" name= "name" value= "Delete Task" ></form>
+   
     </div>
     {{/completed}}
     {{/todos}}

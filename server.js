@@ -54,6 +54,7 @@ app.post("/", function(req, res) {
 });
 
 app.post("/complete", function(req, res) {
+  console.log(req.body.something);
   models.sqltodo
     .update(
       {
@@ -67,6 +68,17 @@ app.post("/complete", function(req, res) {
     )
     .then(function(completedTask) {
       res.redirect("/");
+    });
+});
+
+app.post("/delete", function(req, res) {
+  models.sqltodo
+    .destroy({ where: { name: req.body.something } })
+    .then(function(deletedTask) {
+      res.redirect("/");
+    })
+    .catch(function(err) {
+      res.status(500).send(err);
     });
 });
 
