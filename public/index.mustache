@@ -19,6 +19,9 @@
     <input type="submit" value="Add Todo" class="button" id="submit">
     </form>
 
+   
+
+
     {{#todos}}
     {{^completed}}
     <div class="list">
@@ -27,7 +30,11 @@
    <span><input type="submit"  class="button" name= "name" value= "Mark As Complete" ></form>{{name}}</span></li><form action = "/delete" method ="post"> 
    <input type="hidden" name="something" value= "{{name}}">
    <span><input type="submit"  class="button" name= "name" value= "Delete Task" ></form>
-   
+    <form action="/update-page/{{id}}" method="post">
+    <input type="hidden" name="id" value = "{{id}}"
+    <input type="hidden" name="post" value = "{{name}}"class="input">
+    <input type="submit" value="Update Todo" class="button" id="submit">
+    </form>
     </div>
     {{/completed}}
     {{/todos}}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+
+</head>
+
+<body>
+
+<h1>Update Todo</h1>
+
+
+{{#foundTodo}}
+
+    <form action="/update/{{id}}" method="post">
+    <input type="text" name="Landi" class="input" value="{{name}}">
+    <input type="submit" value="Add Todo" class="button" id="submit">
+    </form>
+    {{/foundTodo}}
+
+    
+    
+    
+   
+    
+
+    </body>
+
+</html>
+

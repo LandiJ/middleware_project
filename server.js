@@ -49,7 +49,7 @@ app.post("/", function(req, res) {
     });
 
   // todos.push(req.body.todos);
-  // // console.log(todos);
+  // console.log(todos);
   // res.render("index", { todos: todos, complete: complete });
 });
 
@@ -74,6 +74,31 @@ app.post("/complete", function(req, res) {
 app.post("/delete", function(req, res) {
   models.sqltodo
     .destroy({ where: { name: req.body.something } })
+    .then(function(deletedTask) {
+      res.redirect("/");
+    })
+    .catch(function(err) {
+      res.status(500).send(err);
+    });
+});
+
+app.post("/update-page/:id", function(req, res) {
+  models.sqltodo
+    .find({ where: { id: req.params.id } })
+    .then(foundTodo => {
+      res.render("update", {
+        foundTodo: foundTodo
+      });
+      // res.send(foundTodo);
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    });
+});
+
+app.post("/update/:id", function(req, res) {
+  models.sqltodo
+    .update({ name: req.body.Landi }, { where: { id: req.params.id } })
     .then(function(deletedTask) {
       res.redirect("/");
     })
